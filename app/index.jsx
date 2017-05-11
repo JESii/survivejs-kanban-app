@@ -8,8 +8,8 @@ if(process.env.NODE_ENV !== 'production') {
 
 ReactDOM.render(
   <div>
-  <h1>Hello incredible mystical world</h1>
-  <Notes />
+    <h1>Hello incredible new world</h1>
+    <Notes />
   </div>,
   document.getElementById('app')
 );
