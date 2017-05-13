@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Notes from './components/notes';
+import App from './components/App';
 
 if(process.env.NODE_ENV !== 'production') {
   React.Perf = require('react-addons-perf');
@@ -9,7 +9,7 @@ if(process.env.NODE_ENV !== 'production') {
 ReactDOM.render(
   <div>
     <h1>Hello incredible new world</h1>
-    <Notes />
+    <App />
   </div>,
   document.getElementById('app')
 );
