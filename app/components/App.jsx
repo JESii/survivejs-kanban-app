@@ -5,7 +5,6 @@ import Notes from './Notes';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       notes: [
         { id: uuid.v4(), task: 'Learn React'},
@@ -21,9 +20,15 @@ export default class App extends React.Component {
     return (
       <div>
         <button onClick={this.addNote}>+ Add Note</button>
-        <Notes notes={notes} />
+        <Notes notes={notes} onDelete={this.deleteNote} />
       </div>
     );
+  }
+  deleteNote=(id, e) => {
+    e.stopPropagation();
+      this.setState({
+        notes: this.state.notes.filter(note => note.id !== id)
+      });
   }
   addNote = () => {
     this.setState ({
