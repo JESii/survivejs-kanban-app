@@ -8,9 +8,7 @@ const TARGET = process.env.npm_lifecycle_event;
 const ENABLE_POLLING = process.env.ENABLE_POLLING;
 const PATHS = {
   app: path.join(__dirname, 'app'),
-  style: [
-    path.join(__dirname, 'app', 'main.css')
-  ],
+  style: path.join(__dirname, 'app', 'main.css'),
   build: path.join(__dirname, 'build'),
   test: path.join(__dirname, 'tests')
 };
@@ -83,9 +81,13 @@ switch(TARGET) {
     config = merge(
       common,
       {
-        devtool: 'inline-source-map'
+        devtool: 'inline-source-map',
+        entry: {
+          style: PATHS.style
+        },
       },
       parts.loadIsparta(PATHS.app),
+      parts.extractCSS(PATHS.style),
       parts.loadJSX(PATHS.test)
     );
     break;
