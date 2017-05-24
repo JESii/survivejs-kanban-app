@@ -4,7 +4,7 @@ module.exports = function karmaConfig (config) {
     frameworks: [
       // Reference: https://github.com/karma-runner/karma-mocha
       // Set framework to mocha
-      'mocha'
+      'jasmine'
     ],
 
     reporters: [

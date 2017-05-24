@@ -16,6 +16,7 @@ export default class App extends React.Component {
 
   render() {
     // Why is the following line set up as it is? why {notes}?
+    // BECAUSE that's how we get the notes object added (since no database)
     const {notes} = this.state;
     return (
       <div>
