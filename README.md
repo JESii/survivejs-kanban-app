@@ -2,6 +2,9 @@
 
 See [SurviveJS - React](http://survivejs.com/react/introduction/) for the book.
 
+NOTE: There are problems styling buttons; changed to span and styling works, per Juho.
+See [Styling Issue](https://github.com/survivejs/react-book/issues/442) for more info.
+
 ## Getting Started
 
 1. `npm i` - Install dependencies. This might take a while.
